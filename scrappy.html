@@ -1,0 +1,27 @@
+<head>
+  <title>scrappy</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor Web Scrappy!</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <button class="clickme">Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+  <br><br>
+  <h3>Edamam</h3><button class="getUrl" url="edamam" function="getUrl">Click getUrl </button> <button class="getIngredients" url="edamam" function="getIngredients">Click getIngredients</button> <button class="getBoth" url="edamam" function="getBoth">Click getBoth</button> <button class="seeBoth" url="edamam" function="seeBoth">See getBoth</button>
+  <br>
+  <br>
+  <h3>Funcook</h3><button class="getUrl" url="funcook" function="getUrl">Click getUrl </button> <button class="getIngredients" url="funcook" function="getIngredients">Click getIngredients</button> <button class="getBoth" url="funcook" function="getBoth">Click getBoth</button> <button class="seeBoth" url="funcook" function="seeBoth">See getBoth</button>
+  <br>
+  <br>
+  <div id="scra"></div>
+</template>
+<template name="json_Data" id="json_Data">
+  {{#each all_data}}
+    {{this}}
+  {{/each}}
+</template>
